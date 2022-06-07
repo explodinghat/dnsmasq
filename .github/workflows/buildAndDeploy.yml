@@ -21,4 +21,4 @@ jobs:
     
     - name: Build the Docker image
       working-directory: docker
-      run: docker build . --file Dockerfile --tag dnsmsaq:$(date +%s)
+      run: docker build . --file dockerfile --tag dnsmsaq:$(date +%s)
