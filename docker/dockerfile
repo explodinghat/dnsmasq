@@ -1,8 +1,9 @@
 FROM alpine:latest
 LABEL maintainer="richjjoh@gmail.com"
 RUN apk update
-RUN apk --no-cache add dnsmasq
+RUN apk --no-cache add dnsmasq wget
 COPY dnsmasq.conf /etc/dnsmasq.conf
 COPY dnsmasq.hosts /etc/dnsmasq.hosts
+CMD wget https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -O /etc/blocklists.hosts
 EXPOSE 53/udp
 CMD ["dnsmasq","-d"]
