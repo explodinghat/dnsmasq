@@ -1,10 +1,10 @@
 name: buildAndDeploy.yml
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  #push:
+   # branches: [ main ]
+ # pull_request:
+   # branches: [ main ]
   schedule:
     - cron: '0 2 * * *' # run at 2 AM UTC
   # Allows you to run this workflow manually from the Actions tab
